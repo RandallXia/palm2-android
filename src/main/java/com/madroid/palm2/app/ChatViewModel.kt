@@ -1,5 +1,6 @@
 package com.madroid.palm2.app
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.ai.generativelanguage.v1beta2.DiscussServiceClient
@@ -110,6 +111,7 @@ class ChatViewModel: ViewModel() {
         return example
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun createPrompt(
         messageContent: String
     ): MessagePrompt {
@@ -124,14 +126,14 @@ class ChatViewModel: ViewModel() {
             .addExamples(createCaliforniaExample()) // use addAllExamples() to add a list of examples
             .build()
 
-            // Add this line to update the UI
-            _messages.update {
-                it.toMutableList().apply {
-                    add(palmMessage)
-                }
+        // Add this line to update the UI
+        _messages.update {
+            it.toMutableList().apply {
+                add(palmMessage)
             }
+        }
 
-            return messagePrompt
+        return messagePrompt
     }
 
 

@@ -40,19 +40,12 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.2"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-            excludes += "META-INF/INDEX.LIST" // Add this line
-            excludes += "META-INF/DEPENDENCIES" // And this line
-        }
-    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation(project(mapOf("path" to ":PT_Base_Lib:architecture")))
+    implementation(project(":PT_Base_Lib:architecture"))
 
     implementation("io.grpc:grpc-okhttp:1.53.0")
     implementation("io.grpc:grpc-stub:1.54.0")
