@@ -36,12 +36,12 @@ class ChatViewModel: ViewModel() {
             apiKey = "<insert your api key here>"
         )
 
-        // Create the message prompt
-        val prompt = createPrompt("How tall is the Eiffel Tower?")
+        /*        // Create the message prompt
+                val prompt = createPrompt("How tall is the Eiffel Tower?")
 
-        // Send the first request to kickstart the conversation
-        val request = createMessageRequest(prompt)
-        generateMessage(request)
+                // Send the first request to kickstart the conversation
+                val request = createMessageRequest(prompt)
+                generateMessage(request)*/
     }
     private fun generateMessage(
         request: GenerateMessageRequest
