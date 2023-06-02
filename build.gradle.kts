@@ -43,16 +43,10 @@ android {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-
     implementation(project(":PT_Base_Lib:architecture"))
 
+    implementation("com.google.cloud:gapic-google-cloud-ai-generativelanguage-v1beta2-java:0.0.0-SNAPSHOT")
     implementation("io.grpc:grpc-okhttp:1.53.0")
-    implementation("io.grpc:grpc-stub:1.54.0")
-    implementation("io.grpc:grpc-protobuf:1.54.0")
-    implementation("com.google.api:gax:2.26.0")
-    implementation("com.google.api:gax-grpc:2.26.0")
-    implementation("com.google.api:gax-grpc:2.26.0")
 
     implementation(AndroidX.activityCompose)
     implementation(AndroidX.lifecycleViewModelCompose)
